@@ -1,8 +1,10 @@
 // src/Home.js
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { ReactTyped } from "react-typed";
+
+import Infobtn from "../common/Infobtns";
 
 const Home = () => {
   return (
@@ -31,17 +33,7 @@ const Home = () => {
           </p>
         </div>
 
-        <div class="p-3">
-          <button type="button" class="btn btn-outline-light btn-lg m-2">
-            Education
-          </button>
-          <button type="button" class="btn btn-outline-light btn-lg m-2">
-            Resume
-          </button>
-          <button type="button" class="btn btn-outline-light btn-lg m-2">
-            Certificates
-          </button>
-        </div>
+        <Infobtn/>
       </div>
     </div>
   );
