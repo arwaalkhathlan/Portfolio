@@ -1,7 +1,14 @@
 
+import ContactForm from "../common/ContactForm";
 
 const Contact = () => {
-    return <h1>Contact Me</h1>
+  
+
+  return (
+    <div className="container mt-5">
+     <ContactForm />
+    </div>
+  );
 };
 
 export default Contact;
