@@ -1,15 +1,23 @@
+
+import Resume from '../../assets/files/Resume.pdf';
+
+
 const Infobtn = () => {
+
+  const handleResumeClick = () => {
+    window.open(Resume, '_blank');
+  };
+
+
   return (
     <div class="p-3">
-      <button type="button" class="btn btn-outline-light btn-lg m-2">
-        Education
-      </button>
-      <button type="button" class="btn btn-outline-light btn-lg m-2">
+
+      
+      <button type="button" class="btn btn-outline-light btn-lg m-2" onClick={handleResumeClick}>
         Resume
       </button>
-      <button type="button" class="btn btn-outline-light btn-lg m-2">
-        Certificates
-      </button>
+
+
     </div>
   );
 };

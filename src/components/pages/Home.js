@@ -5,11 +5,14 @@ import React from "react";
 import { ReactTyped } from "react-typed";
 
 import Infobtn from "../common/Infobtns";
+import Education from "../layout/Education";
+import Certifications from "../layout/Certificates";
 
 const Home = () => {
   return (
     <div className=" bg-dark text-white vh-100 d-flex justify-content-center align-items-center text-center">
       <div className="container">
+        
         <div className="main-text justify-content-center align-items-center ">
           <p class=" fs-3 opacity-75 ">
             Welcome to{" "}
@@ -33,7 +36,9 @@ const Home = () => {
           </p>
         </div>
 
-        <Infobtn/>
+        <Infobtn />
+        <Education />
+        <Certifications />
       </div>
     </div>
   );
