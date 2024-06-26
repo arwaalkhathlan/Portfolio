@@ -42,12 +42,13 @@ const ContactForm = () => {
 
   return (
     <div className="container mt-5 ">
+      <p class="d-flex justify-content-center align-items-center"> Or This Form</p>
       
       <form onSubmit={handleSubmit}>
         <div className="mb-3 ">
           <label
             htmlFor="name"
-            className="form-label d-flex justify-content-center align-items-center"
+            className="form-label d-flex justify-content-center align-items-center text-white"
           >
             Name
           </label>
@@ -77,7 +78,7 @@ const ContactForm = () => {
         <div className="mb-3">
           <label
             htmlFor="email"
-            className="form-label d-flex justify-content-center align-items-center"
+            className="form-label d-flex justify-content-center align-items-center text-white"
           >
             Email
           </label>
@@ -86,6 +87,7 @@ const ContactForm = () => {
             className="form-control"
             id="email"
             name="email"
+            placeholder="Email"
             value={formData.email}
             onChange={handleChange}
             required
@@ -94,7 +96,7 @@ const ContactForm = () => {
         <div className="mb-3">
           <label
             htmlFor="message"
-            className="form-label d-flex justify-content-center align-items-center"
+            className="form-label d-flex justify-content-center align-items-center text-white"
           >
             Message
           </label>
@@ -103,13 +105,14 @@ const ContactForm = () => {
             id="message"
             name="message"
             rows="3"
+            placeholder="Message"
             value={formData.message}
             onChange={handleChange}
             required
           ></textarea>
         </div>
         <div class="d-flex justify-content-center align-items-center">
-          <button type="submit" className="btn btn-dark ">
+          <button type="submit" className="btn btn-light rounded-3 ">
             Send
           </button>
         </div>
