@@ -4,7 +4,8 @@ import emailjs from "emailjs-com";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: "",
+    first_name: "",
+    last_name: "",
     email: "",
     message: "",
   });
@@ -32,7 +33,8 @@ const ContactForm = () => {
       });
 
     setFormData({
-      name: "",
+      first_name: "",
+      last_name: "",
       email: "",
       message: "",
     });
@@ -40,24 +42,43 @@ const ContactForm = () => {
 
   return (
     <div className="container mt-5 ">
-      <h2 class="d-flex justify-content-center align-items-center">Contact Me</h2>
+      
       <form onSubmit={handleSubmit}>
         <div className="mb-3 ">
-          <label htmlFor="name" className="form-label d-flex justify-content-center align-items-center">
+          <label
+            htmlFor="name"
+            className="form-label d-flex justify-content-center align-items-center"
+          >
             Name
           </label>
-          <input
-            type="text"
-            className="form-control"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+          <div class="d-flex">
+            <input
+              type="text"
+              className="form-control"
+              id="name"
+              name="first_name"
+              placeholder="First Name"
+              value={formData.first_name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              className="form-control"
+              id="name"
+              name="last_name"
+              placeholder="Last Name"
+              value={formData.last_name}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
         <div className="mb-3">
-          <label htmlFor="email" className="form-label d-flex justify-content-center align-items-center">
+          <label
+            htmlFor="email"
+            className="form-label d-flex justify-content-center align-items-center"
+          >
             Email
           </label>
           <input
@@ -71,7 +92,10 @@ const ContactForm = () => {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="message" className="form-label d-flex justify-content-center align-items-center">
+          <label
+            htmlFor="message"
+            className="form-label d-flex justify-content-center align-items-center"
+          >
             Message
           </label>
           <textarea
@@ -84,9 +108,11 @@ const ContactForm = () => {
             required
           ></textarea>
         </div>
-        <button type="submit" className="btn btn-dark d-flex justify-content-center align-items-center">
-          Send
-        </button>
+        <div class="d-flex justify-content-center align-items-center">
+          <button type="submit" className="btn btn-dark ">
+            Send
+          </button>
+        </div>
       </form>
     </div>
   );
