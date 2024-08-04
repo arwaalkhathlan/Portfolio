@@ -1,46 +1,34 @@
 import { Outlet, Link } from "react-router-dom";
+import "../../css/Header.css"
+
 const Header = () => {
     return (
         <>
-
-        
-        <nav class="navbar navbar-expand-lg bg-body-tertiary " data-bs-theme="dark">
-        <div class="container-fluid">
-
-            <Link class="navbar-brand" to="/">Arwa Alkhathlan</Link>
-
-            
-
-            <button 
-            class="navbar-toggler" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbarNav" 
-            aria-controls="navbarNav" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-
-
-
-            <div class="collapse navbar-collapse"  id="navbarNav">
-            <div class="navbar-nav">
-
-                <Link class="nav-link active" to= "/">Home</Link>
-                <Link class="nav-link" to="/Projects">Projects</Link>
-                <Link class="nav-link" to = "/contact">Contact</Link>
-
-            </div>
-
-            </div>
-            </div>
-        </nav>
-        <Outlet />
-
+            <nav className="navbar navbar-expand-lg custom-navbar" data-bs-theme="dark">
+                <div className="container-fluid">
+                    <Link className="navbar-brand fw-bold" to="/">Arwa Alkhathlan</Link>
+                    <button 
+                        className="navbar-toggler" 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" 
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <div className="navbar-nav">
+                            <Link className="nav-link " to="/">Home</Link>
+                            <Link className="nav-link" to="/Projects">Projects</Link>
+                            <Link className="nav-link" to="/contact">Contact</Link>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <Outlet />
         </>
-    )
-
+    );
 }
 
 export default Header;

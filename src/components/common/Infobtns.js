@@ -13,7 +13,7 @@ const Infobtn = () => {
     <div class="p-3">
 
       
-      <button type="button" class="btn btn-outline-light btn-lg m-2" onClick={handleResumeClick}>
+      <button type="button" class="btn btn-dark btn-lg m-2" onClick={handleResumeClick}>
         Resume
       </button>
 

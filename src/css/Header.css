@@ -1,0 +1,11 @@
+/* styles.css */
+.custom-navbar {
+    background-color: #F0A8D0 !important; /* Custom background color */
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: #FFFFFF !important; /* Custom text color */
+}
+
+

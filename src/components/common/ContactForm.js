@@ -112,7 +112,7 @@ const ContactForm = () => {
           ></textarea>
         </div>
         <div class="d-flex justify-content-center align-items-center">
-          <button type="submit" className="btn btn-light rounded-3 ">
+          <button type="submit" className="btn btn-dark rounded-3 ">
             Send
           </button>
         </div>
